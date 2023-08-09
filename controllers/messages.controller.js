@@ -1,5 +1,9 @@
+const path = require('path');
+
 function getMessages(req,res) {
-    res.send('<ul><li>Hellooooworld</li></ul>');
+    const image = path.join(__dirname, '..', 'public', 'skimountain.jpg');
+   // res.send('<ul><li>Hellooooworld</li></ul>');
+   res.sendFile(image);
 }
 
 function postMessage(req,res){
